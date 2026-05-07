@@ -1,118 +1,167 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Mail, GraduationCap, Globe, Users } from "lucide-react";
 
 export default function Home() {
   return (
-    <main className="bg-gray-50 text-gray-900">
+    <main className="bg-white text-gray-900">
+
+      {/* NAVBAR */}
+      <header className="sticky top-0 bg-white shadow-sm z-50">
+        <div className="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
+          <h1 className="font-bold text-xl">Suraj Bhandari</h1>
+
+          <nav className="flex gap-6 text-sm font-medium text-gray-600">
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#research">Research</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+          </nav>
+        </div>
+      </header>
 
       {/* HERO */}
-      <section className="min-h-screen flex flex-col items-center justify-center text-center px-6 bg-gradient-to-b from-white to-gray-100">
+      <section className="min-h-screen flex items-center justify-center text-center px-6 bg-gradient-to-b from-white to-gray-50">
+        <div>
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-5xl font-bold"
+          >
+            Suraj Bhandari
+          </motion.h1>
 
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="text-5xl font-bold"
-        >
-          Suraj Bhandari
-        </motion.h1>
+          <p className="mt-4 text-xl text-gray-600">
+            Agricultural Economist | Researcher | Policy Analyst | Youth Leader
+          </p>
 
-        <p className="text-xl mt-3 text-gray-600">
-          Agricultural Economist | Researcher | Youth Leader
-        </p>
+          <p className="mt-6 max-w-2xl mx-auto text-gray-500">
+            Working at the intersection of agriculture, rural development, and policy innovation
+            to create sustainable impact in Nepal and beyond.
+          </p>
 
-        <p className="mt-6 max-w-2xl text-gray-700">
-          Working at the intersection of agriculture, policy research, and youth empowerment
-          to drive sustainable development in Nepal.
-        </p>
-
-        <div className="mt-8 flex gap-4">
-          <a href="#about" className="bg-black text-white px-6 py-3 rounded-full">
-            Explore
-          </a>
-          <a href="#contact" className="border border-black px-6 py-3 rounded-full">
-            Contact
-          </a>
+          <div className="mt-8 flex gap-4 justify-center">
+            <a href="#research" className="bg-black text-white px-6 py-3 rounded-full">
+              Explore Research
+            </a>
+            <a href="#contact" className="border border-black px-6 py-3 rounded-full">
+              Contact Me
+            </a>
+          </div>
         </div>
       </section>
 
       {/* ABOUT */}
-      <section id="about" className="py-24 px-6 max-w-5xl mx-auto">
-        <h2 className="text-3xl font-bold mb-10 text-center">About Me</h2>
-
-        <div className="bg-white p-8 rounded-2xl shadow-sm leading-relaxed text-gray-700">
-          I am an Agricultural Economist with strong interest in rural development,
-          food systems, youth engagement, and policy transformation. My work combines
-          research, leadership, and international exposure to address real-world challenges.
-        </div>
+      <section id="about" className="py-24 max-w-5xl mx-auto px-6">
+        <h2 className="text-3xl font-bold mb-6">About Me</h2>
+        <p className="text-gray-700 leading-relaxed">
+          I am an Agricultural Economist with a strong interest in rural development,
+          food systems transformation, and youth empowerment. My work combines research,
+          leadership, and international exposure (including agricultural training in Israel)
+          to address real-world challenges in Nepal’s agricultural sector.
+        </p>
       </section>
 
-      {/* HIGHLIGHTS */}
-      <section className="py-24 px-6 bg-white">
+      {/* EXPERIENCE */}
+      <section id="experience" className="bg-gray-50 py-24 px-6">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl font-bold mb-10 text-center">Highlights</h2>
+          <h2 className="text-3xl font-bold mb-10">Experience</h2>
 
           <div className="grid md:grid-cols-2 gap-6">
 
-            <div className="p-6 rounded-2xl bg-gray-50 shadow-sm">
-              <Users className="mb-3" />
-              <h3 className="font-bold">Leadership</h3>
-              <p className="text-gray-600">ANNFSU, IAAS Nepal</p>
+            <div className="bg-white p-6 rounded-xl shadow-sm">
+              <h3 className="font-bold">Student Leadership</h3>
+              <p className="text-gray-600 mt-2">
+                Leadership roles in ANNFSU and IAAS Nepal focusing on student mobilization and governance.
+              </p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-gray-50 shadow-sm">
-              <Globe className="mb-3" />
-              <h3 className="font-bold">International Exposure</h3>
-              <p className="text-gray-600">Agriculture internship in Israel</p>
+            <div className="bg-white p-6 rounded-xl shadow-sm">
+              <h3 className="font-bold">International Internship (Israel)</h3>
+              <p className="text-gray-600 mt-2">
+                Agricultural training focused on modern farming systems and innovation practices.
+              </p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-gray-50 shadow-sm">
-              <GraduationCap className="mb-3" />
-              <h3 className="font-bold">Research</h3>
-              <p className="text-gray-600">Policy & academic conferences</p>
+            <div className="bg-white p-6 rounded-xl shadow-sm">
+              <h3 className="font-bold">Teaching & Training</h3>
+              <p className="text-gray-600 mt-2">
+                Mentoring and capacity building for youth and agricultural students.
+              </p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-gray-50 shadow-sm">
-              <Mail className="mb-3" />
-              <h3 className="font-bold">Teaching</h3>
-              <p className="text-gray-600">Training & youth mentoring</p>
+            <div className="bg-white p-6 rounded-xl shadow-sm">
+              <h3 className="font-bold">Research Participation</h3>
+              <p className="text-gray-600 mt-2">
+                Academic conferences and policy-oriented research presentations.
+              </p>
             </div>
 
           </div>
         </div>
       </section>
 
-      {/* JOURNEY */}
-      <section className="py-24 px-6 max-w-5xl mx-auto">
-        <h2 className="text-3xl font-bold mb-10 text-center">Journey</h2>
+      {/* RESEARCH */}
+      <section id="research" className="py-24 px-6 max-w-5xl mx-auto">
+        <h2 className="text-3xl font-bold mb-10">Research & Publications</h2>
 
-        <div className="border-l-2 border-black pl-6 space-y-8 text-gray-700">
+        <div className="space-y-6">
 
-          <div>
-            <h3 className="font-bold">Student Leadership</h3>
-            <p>ANNFSU & IAAS involvement</p>
+          <div className="p-6 border rounded-xl">
+            <h3 className="font-bold">Agricultural Transformation in Nepal</h3>
+            <p className="text-gray-600">
+              Analysis of productivity, policy gaps, and modernization pathways.
+            </p>
           </div>
 
-          <div>
-            <h3 className="font-bold">International Internship</h3>
-            <p>Israel agriculture training exposure</p>
+          <div className="p-6 border rounded-xl">
+            <h3 className="font-bold">Youth Engagement in Agriculture</h3>
+            <p className="text-gray-600">
+              Study on youth participation in agribusiness and rural economy.
+            </p>
           </div>
 
-          <div>
-            <h3 className="font-bold">Research & Conferences</h3>
-            <p>Policy research and academic presentations</p>
+          <div className="p-6 border rounded-xl">
+            <h3 className="font-bold">Indigenous Farming Systems</h3>
+            <p className="text-gray-600">
+              Documentation of traditional agricultural knowledge systems in Nepal.
+            </p>
           </div>
 
+        </div>
+      </section>
+
+      {/* PROJECTS */}
+      <section id="projects" className="bg-gray-50 py-24 px-6">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-3xl font-bold mb-10">Projects</h2>
+
+          <div className="grid md:grid-cols-2 gap-6">
+
+            <div className="bg-white p-6 rounded-xl shadow-sm">
+              <h3 className="font-bold">Himalayan Elixir</h3>
+              <p className="text-gray-600 mt-2">
+                Agricultural value chain initiative focusing on natural and Himalayan products.
+              </p>
+            </div>
+
+            <div className="bg-white p-6 rounded-xl shadow-sm">
+              <h3 className="font-bold">Youth Development Campaigns</h3>
+              <p className="text-gray-600 mt-2">
+                Community-based programs for leadership and empowerment.
+              </p>
+            </div>
+
+          </div>
         </div>
       </section>
 
       {/* CONTACT */}
-      <section id="contact" className="py-24 px-6 bg-white text-center">
+      <section id="contact" className="py-24 px-6 text-center">
         <h2 className="text-3xl font-bold mb-6">Let’s Connect</h2>
-
         <p className="text-gray-600 mb-6">
-          Open for research collaboration, policy work, and opportunities.
+          Open for research collaboration, fellowships, and policy opportunities.
         </p>
 
         <a
@@ -124,8 +173,8 @@ export default function Home() {
       </section>
 
       {/* FOOTER */}
-      <footer className="text-center py-10 text-gray-500 text-sm">
-        © 2026 Suraj Bhandari. Built with Next.js
+      <footer className="py-10 text-center text-gray-500 text-sm border-t">
+        © 2026 Suraj Bhandari. All rights reserved.
       </footer>
 
     </main>
