@@ -1,0 +1,10 @@
+export default function About() {
+  return (
+    <main className="p-10">
+      <h1 className="text-4xl font-bold">About Me</h1>
+      <p className="mt-4 text-gray-600">
+        I work on agricultural transformation, rural development systems, and evidence-based policy design to improve livelihoods in Nepal and similar economies.
+      </p>
+    </main>
+  );
+}
