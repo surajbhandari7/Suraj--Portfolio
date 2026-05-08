@@ -1,9 +1,8 @@
 import "./globals.css";
-import Link from "next/link";
 
 export const metadata = {
   title: "Suraj Bhandari",
-  description: "Agricultural Economist | Research | Youth Leadership",
+  description: "Agricultural Economist | Researcher | Policy Analyst",
 };
 
 export default function RootLayout({
@@ -13,24 +12,34 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-white text-black">
+      <body style={{ margin: 0, fontFamily: "Arial, sans-serif", background: "#f9fafb" }}>
 
-        {/* GLOBAL NAVBAR */}
-        <nav className="flex justify-between px-8 py-4 border-b sticky top-0 bg-white">
-          <Link href="/" className="font-bold">Suraj Bhandari</Link>
+        {/* NAVBAR */}
+        <nav style={{
+          display: "flex",
+          justifyContent: "center",
+          gap: "25px",
+          padding: "18px",
+          background: "#white",
+          borderBottom: "1px solid #eee",
+          position: "sticky",
+          top: 0
+        }}>
+          <h1>Suraj Bhandari</h1>
 
-          <div className="flex gap-6 text-sm">
-            <Link href="/about">About</Link>
-            <Link href="/research">Research</Link>
-            <Link href="/projects">Projects</Link>
-            <Link href="/himalayan-elixir">Himalayan Elixir</Link>
-            <Link href="/cv">CV</Link>
-            <Link href="/contact">Contact</Link>
+          <div style={{ display: "flex", gap: "15px" }}>
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/research">Research</a>
+            <a href="/projects">Projects</a>
+            <a href="/contact">Contact</a>
           </div>
         </nav>
 
-        {children}
-
+        {/* PAGE CONTENT */}
+        <div style={{ maxWidth: "1000px", margin: "0 auto" }}>
+          {children}
+        </div>
       </body>
     </html>
   );
